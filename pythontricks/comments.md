@@ -54,7 +54,7 @@ print('Hello, %s' % name)
 print('Hello, %s is No. %x' % (name, num))
 ```
 
-9. New style string format.
+10. New style string format.
 
 ```Python
 name = "Bob"
@@ -62,6 +62,29 @@ num  = 456
 print('Hello, {}'.format(name))
 print('Hello, {n} is No. {b:x}'.format(n=name, b=num))
 ```
+
+
+11. Literal string Interpolation (Python 3.6+).
+
+```Python
+name = "Bob"
+num  = 456
+print(f'Hello, {name} is No. {num}')
+```
+`
+12. Template Strings
+
+```Python
+from string import Template
+name="Bob"
+errno=32
+t = Template('Hey, $name!')
+t.substitute(name=name)
+templ_string = 'Hey $name, there is a $error error!'
+Template(templ_string).substitute(name=name, error=hex(errno))
+```
+
+
 
 
 
