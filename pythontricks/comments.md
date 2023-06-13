@@ -25,7 +25,7 @@ names = [
 3. Context Managers and the ```with``` Statement
 
 ```Python
-with open('hello.txt', 'w') as f:
+with open('hello.txt', 'w', encoding="utf-8") as f:
     f.write('Hello, world!')
 ```
 
