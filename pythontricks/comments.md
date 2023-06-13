@@ -35,7 +35,7 @@ with open('hello.txt', 'w') as f:
 
 6. "__var": will be translated to some other variable automatically!!!
 
-7. "__var__": dunder default function
+7. "\_\_var\_\_": dunder default function
 
 8. "_": temperal variable
 
