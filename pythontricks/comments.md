@@ -15,11 +15,18 @@ Author: Dan Bader
 
 ```Python
 names = [
-...     'Alice',
-...     'Bob',
-...     'Dilbert',
-...     'Jane',  # If you add items latter, you won't add more commas
-...     ]
+    'Alice',
+    'Bob',
+    'Dilbert',
+    'Jane',  # If you add items latter, you won't add more commas
+]
+
+3. Context Managers and the ```with``` Statement
+
+```Python
+with open('hello.txt', 'w') as f:
+    f.write('Hello, world!')
+```
 
 
 
