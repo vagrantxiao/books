@@ -7,5 +7,19 @@ Author: Dan Bader
 [dbader.org/python-tricks-toolkit](https://www.dbader.org/python-tricks-toolkit)
 
 
-## Patterns for Cleaner Python
+## Chapter 2: Patterns for Cleaner Python
+
+1. Use Asster for better dubugging.
+
+2. User comma.
+
+```Python
+names = [
+...     'Alice',
+...     'Bob',
+...     'Dilbert',
+...     'Jane',  # If you add items latter, you won't add more commas
+...     ]
+
+
 
