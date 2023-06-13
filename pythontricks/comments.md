@@ -29,13 +29,14 @@ with open('hello.txt', 'w') as f:
     f.write('Hello, world!')
 ```
 
-4. "_var": local variable
+4. "_var": local internal variable
 
-5. "var_": avoid maning conflicts
+5. "var_": avoid naming conflicts with key words
 
 6. "__var": will be translated to some other variable automatically!!!
 
-7. "\_\_var\_\_": dunder default function
+7. "\_\_var\_\_": dunder default function, special methods defined by Python
+language.
 
 8. "_": temperal variable
 
