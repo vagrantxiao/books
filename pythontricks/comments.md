@@ -29,5 +29,21 @@ with open('hello.txt', 'w') as f:
     f.write('Hello, world!')
 ```
 
+4. "_var": local variable
+
+5. "var_": avoid maning conflicts
+
+6. "__var": will be translated to some other variable automatically!!!
+
+7. "__var__": dunder default function
+
+8. "_": temperal variable
+
+```Python
+car = ('red', 'auto', 12, 3812.4)
+color, _, _, mileage = car
+```
+
+
 
 
