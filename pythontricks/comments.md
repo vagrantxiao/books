@@ -71,7 +71,7 @@ name = "Bob"
 num  = 456
 print(f'Hello, {name} is No. {num}')
 ```
-`
+
 12. Template Strings
 
 ```Python
