@@ -20,6 +20,7 @@ names = [
     'Dilbert',
     'Jane',  # If you add items latter, you won't add more commas
 ]
+```
 
 3. Context Managers and the ```with``` Statement
 
