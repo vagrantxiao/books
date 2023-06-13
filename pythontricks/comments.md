@@ -11,7 +11,7 @@ Author: Dan Bader
 
 1. Use Asster for better dubugging.
 
-2. User comma.
+2. User commas. Use multi-lines for to ```git diff``` better.
 
 ```Python
 names = [
