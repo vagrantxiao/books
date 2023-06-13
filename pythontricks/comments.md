@@ -86,6 +86,31 @@ Template(templ_string).substitute(name=name, error=hex(errno))
 
 
 
+## Chapter 3: Effective Functions 
+1. Function Can be Nested
+
+```Python
+def speak(text):
+    def whisper(t):
+        return t.lower() + '...'
+    return whisper(text)
+```
+
+2. Objects can behave like functions.
+
+```Python
+class Adder:
+    def __init__(self, n):
+        self.n = n
+    def __call__(self, x):
+        return self.n + x
+plus_3 = Adder(3)
+print(plus_3(4))
+```
+
+
+
+
 
 
 
