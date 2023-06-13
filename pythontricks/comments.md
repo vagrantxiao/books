@@ -45,6 +45,27 @@ car = ('red', 'auto', 12, 3812.4)
 color, _, _, mileage = car
 ```
 
+9. Old style string format.
+
+```Python
+name = "Bob"
+num  = 456
+print('Hello, %s' % name)
+print('Hello, %s is No. %x' % (name, num))
+```
+
+9. New style string format.
+
+```Python
+name = "Bob"
+num  = 456
+print('Hello, {}'.format(name))
+print('Hello, {n} is No. {b:x}'.format(n=name, b=num))
+```
+
+
+
+
 
 
 
