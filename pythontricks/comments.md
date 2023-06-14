@@ -160,6 +160,22 @@ def greet():
 greet()
 ```
 
+8. Fun with \*args and \*\*kwargs.
+
+```Python
+def foo(required, *args, **kwargs):
+    print(required)
+    if args:
+        print(args)
+    if kwargs:
+        print(kwargs)
+```
+
+
+
+
+
+
 
 
 
