@@ -108,6 +108,41 @@ plus_3 = Adder(3)
 print(plus_3(4))
 ```
 
+3. Lambdas are Single-Expression Functions.
+
+```Python
+add = lambda x, y: x + y
+print(add(5,4))
+```
+
+4. Lambdas You Can Use.
+
+```Python
+tuples = [(1, 'd'), (2, 'b'), (4, 'a'), (3, 'c')]
+sorted(tuples, key=lambda x: x[1])
+```
+5. Return a configurable function.
+
+```Python
+def make_adder(n):
+    return lambda x: x + n
+plus_3 = make_adder(3)
+plus_5 = make_adder(5)
+print(plus_3(4))
+print(plus_5(4))
+```
+
+6. Bad and Good.
+
+```Python
+# Harmful
+list(filter(lambda x: x % 2 == 0, range(16)))
+
+# Better
+[x for x in range(16) if x % 2 == 0]
+```
+
+
 
 
 
