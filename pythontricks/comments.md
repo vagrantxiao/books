@@ -169,6 +169,40 @@ def foo(required, *args, **kwargs):
         print(args)
     if kwargs:
         print(kwargs)
+
+foo('hello', 1, 2, 3, key1='value', key2=999)
+foo.__name__
+```
+
+9. Debugging features.
+
+```Python
+def trace(f):
+    @functools.wraps(f)
+    def decorated_function(*args, **kwargs):
+        print(f, args, kwargs)
+        result = f(*args, **kwargs)
+        print(result)
+    return decorated_function
+
+@trace
+def greet(greeting, name):
+    return '{}, {}!'.format(greeting, name)
+
+print(greet('Hello', 'Bob'))
+```
+
+10. Function Argument Unpacking
+
+```Python
+def print_vector(x, y, z):
+    print('<%s, %s, %s>' % (x, y, z))
+tuple_vec = (1, 0, 1)
+list_vec = [1, 0, 1]
+dict_vec = {'y': 0, 'z': 1, 'x': 1}
+print_vector(*tuple_vec)
+print_vector(*list_vec)
+print_vector(**dict_vec)
 ```
 
 
