@@ -174,7 +174,33 @@ foo('hello', 1, 2, 3, key1='value', key2=999)
 foo.__name__
 ```
 
-9. Debugging features.
+9. Decorating Functions That Accept Arguments
+
+```Python
+def proxy(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
+def trace(func):
+    def wrapper(*args, **kwargs):
+        print(f'TRACE: calling {func.__name__}() '
+              f'with {args}, {kwargs}')
+        original_result = func(*args, **kwargs)
+        print(f'TRACE: {func.__name__}() '
+              f'returned {original_result!r}')
+        return original_result
+    return wrapper
+
+@trace
+def say(name, line):
+    return f'{name}: {line}'
+
+print(say('Jane', 'Hello, World'))
+```
+
+
+10. Debugging features.
 
 ```Python
 def trace(f):
@@ -192,7 +218,8 @@ def greet(greeting, name):
 print(greet('Hello', 'Bob'))
 ```
 
-10. Function Argument Unpacking
+
+11. Function Argument Unpacking
 
 ```Python
 def print_vector(x, y, z):
