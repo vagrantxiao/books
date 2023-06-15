@@ -234,7 +234,7 @@ print_vector(**dict_vec)
 
 ## Chapter 4: Classes \& OOP
 
-1. An ```is``` expression evaluates to True if two variables point to the
+1. An ```is``` expression evaluates to True if two variables point to the 
 same (identical) object.
 
 2. An ```==``` expression evaluates to True if the objects referred to by
@@ -284,6 +284,28 @@ class Concrete(Base):
     def foo(self):
         pass
 # Will get errors since we did not define bar
+```
+
+6. Namedtuples to the Rescue. Make sure the local variables cannot be modified
+after the first initiation.
+
+```Python
+from collections import namedtuple
+Car = namedtuple('Car' , 'color mileage')
+my_car = Car('red', 3812.4)
+print(my_car.color)
+print(my_car.mileage)
+``` 
+
+7. SubNametuples
+
+```Python
+class MyCarWithMethods(Car):
+    def hexcolor(self):
+        if self.color == 'red':
+            return '#ff0000'
+        else:
+            return '#000000'
 ```
 
 
