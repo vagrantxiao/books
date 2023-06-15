@@ -240,6 +240,33 @@ same (identical) object.
 2. An ```==``` expression evaluates to True if the objects referred to by
 the variables are equal (have the same contents).
 
+3. String Conversion.
+
+```Python
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+
+    def __repr__(self):
+        return (f'{self.__class__.__name__}('
+                f'{self.color!r}, {self.mileage!r})')
+
+    def __str__(self):
+        return f'a {self.color} car'
+
+car = Car('blue', 5134)
+print(car)
+```
+
+4. Deep copy.
+
+```Python
+import copy
+xs = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+zs = copy.deepcopy(xs)
+```
+
 
 
 
