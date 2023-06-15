@@ -232,8 +232,13 @@ print_vector(*list_vec)
 print_vector(**dict_vec)
 ```
 
+## Chapter 4: Classes \& OOP
 
+1. An ```is``` expression evaluates to True if two variables point to the
+same (identical) object.
 
+2. An ```==``` expression evaluates to True if the objects referred to by
+the variables are equal (have the same contents).
 
 
 
