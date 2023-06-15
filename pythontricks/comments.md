@@ -267,7 +267,24 @@ xs = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 zs = copy.deepcopy(xs)
 ```
 
+5. Force inheritant classes to define moethods.
 
+```Python
+from abc import ABCMeta, abstractmethod
+class Base(metaclass=ABCMeta):
+    @abstractmethod
+    def foo(self):
+        pass
+
+    @abstractmethod
+    def bar(self):
+        pass
+
+class Concrete(Base):
+    def foo(self):
+        pass
+# Will get errors since we did not define bar
+```
 
 
 
