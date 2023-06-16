@@ -377,7 +377,19 @@ writable = {'one': 1, 'two': 2}
 read_only = MappingProxyType(writable)
 ```
 
+5. Stacks (LIFOs)
 
+```Python
+from collections import deque
+s = deque()
+s.append('eat')
+s.append('sleep')
+s.append('code')
+print(s.pop())
+print(s.pop())
+print(s.pop())
+print(s.pop())
+```
 
 
 
