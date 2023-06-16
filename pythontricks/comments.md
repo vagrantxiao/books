@@ -473,7 +473,7 @@ sorted(xs.items(), key=lambda x: abs(x[1]))
 sorted(xs.items(), key=lambda x: x[1], reverse=True)
 ```
 
-7. Avoid missing key errors.
+6. Avoid missing key errors.
 
 ```Python
 name_for_userid = {
@@ -489,7 +489,7 @@ greeting(382)
 greeting(3)
 ```
 
-6. Emulating Switch/Case Statements With Dicts
+7. Emulating Switch/Case Statements With Dicts
 
 ```Python
 def dispatch_dict(operator, x, y):
@@ -499,6 +499,41 @@ def dispatch_dict(operator, x, y):
         'mul': lambda: x * y,
         'div': lambda: x / y,
     }.get(operator, lambda: None)()
+```
+
+## Chapter 8: Pythonic Productivity Techniques
+
+1. Isolating Project Dependencies With Virtualenv 
+
+```Python
+python3 -m venv ./venv
+which pip3
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
