@@ -391,6 +391,115 @@ print(s.pop())
 print(s.pop())
 ```
 
+6. Queue.LifoQueue – Locking Semantics for Parallel Computing
+
+```Python
+from queue import LifoQueue
+s = LifoQueue()
+s.put('eat')
+s.put('sleep')
+s.put('code')
+s.get()
+s.get()
+s.get()
+s.get_nowait()
+s.get() # Will wait forever
+```
+
+7. Queues (FIFOs): collections.deque – Fast & Robust Queues.
+
+```Python
+from collections import deque
+q = deque()
+q.append('eat')
+q.append('sleep')
+q.append('code')
+q.popleft()
+q.popleft()
+q.popleft()
+q.popleft()
+```
+
+## Chapter 6: Looping & Iteration
+
+1. Comprehending Comprehensions.
+
+```Python
+squares = [x * x for x in range(10)]
+even_squares = [x * x for x in range(10) if x % 2 == 0]
+my_dict={ x: x * x for x in range(5) }
+```
+
+2. Sushi list.
+
+```Python
+lst = [1, 2, 3, 4, 5]
+# lst[start:end:step] 
+print(lst[1:3:1])
+```
+
+3. Iteration Class.
+
+```Python
+class Repeater:
+    def __init__(self, value):
+        self.value = value
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        return self.value
+```
+
+4. Generator Expressions vs List Comprehensions. As you can tell, generator
+expressions are somewhat similar to list
+
+```Python
+listcomp = ['Hello' for i in range(3)]
+genexpr = ('Hello' for i in range(3))
+next(genexpr)
+next(genexpr)
+next(genexpr)
+next(genexpr)
+```
+
+5. Sorting Dictionaries for Fun and Profit
+
+```Python
+xs = {'a': 4, 'c': 2, 'b': 3, 'd': 1}
+sorted(xs.items(), key=lambda x: x[1])
+sorted(xs.items(), key=lambda x: abs(x[1]))
+sorted(xs.items(), key=lambda x: x[1], reverse=True)
+```
+
+7. Avoid missing key errors.
+
+```Python
+name_for_userid = {
+    382: 'Alice',
+    950: 'Bob',
+    590: 'Dilbert',
+}
+
+def greeting(userid):
+    return 'Hi %s!' % name_for_userid.get(userid, 'there')
+
+greeting(382)
+greeting(3)
+```
+
+6. Emulating Switch/Case Statements With Dicts
+
+```Python
+def dispatch_dict(operator, x, y):
+    return {
+        'add': lambda: x + y,
+        'sub': lambda: x - y,
+        'mul': lambda: x * y,
+        'div': lambda: x / y,
+    }.get(operator, lambda: None)()
+
 
 
 
