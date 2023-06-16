@@ -308,6 +308,81 @@ class MyCarWithMethods(Car):
             return '#000000'
 ```
 
+8. Dump as Json format.
+
+```Python
+import json
+from collections import namedtuple
+Car = namedtuple('Car' , 'color mileage')
+my_car = Car('red', 3812.4)
+json.dumps(my_car._asdict())
+```
+
+9. Different methods inside a class. 
+
+```Python
+class MyClass:
+    def method(self):
+        return 'instance method called', self
+
+    @classmethod
+    def classmethod(cls):
+        return 'class method called', cls
+    
+    @staticmethod
+    def staticmethod():
+        return 'static method called'
+
+
+obj = MyClass()
+print(MyClass.method(obj))
+print(MyClass.classmethod(cls))
+print(MyClass.staticmethod())
+```
+
+
+## Chapter 5: Common Data Structures in Python
+
+1. Ordered dictionary.
+
+```Python
+import collections
+d = collections.OrderedDict(one=1, two=2, three=3)
+print(d)
+``` 
+
+2. Set to default values for missing keys for dictionary.
+
+```Python
+from collections import defaultdict
+dd = defaultdict(list)
+dd['dogs'].append('Rufus')
+print(dd)
+```
+
+3. Merge two dicts together.
+
+```Python
+from collections import ChainMap
+dict1 = {'one': 1, 'two': 2}
+dict2 = {'three': 3, 'four': 4}
+chain = ChainMap(dict1, dict2)
+```
+
+4. Read-only dicts.
+
+```Python
+from types import MappingProxyType
+writable = {'one': 1, 'two': 2}
+read_only = MappingProxyType(writable)
+```
+
+
+
+
+
+
+
 
 
 
